@@ -2,17 +2,15 @@
 
 $ssFile = getVar($_REQUEST["ssFile"]);
 $yourname = check_input($_POST['full_name']);
-$Phone    = check_input($_POST['phone']);
-$address    = check_input($_POST['address']);
-$email    = check_input($_POST['email']);
+$Phone = check_input($_POST['phone']);
+$address = check_input($_POST['address']);
+$email = check_input($_POST['email']);
 $Err = "";
 $valid = true;
-
 
 function getVar(&$value, $default = null) { return isset($value) ? $value : $default; }
 $allowedFiles =  array('pdf','doc','docx','odt', 'ppt', 'pptx');
 $fileAllow = true;
-
 
 for($i=0;$i<count($_FILES['ssFile']['size']);$i++){
 	
@@ -84,7 +82,7 @@ exit();
 
 <?php
 
-//$to= "alon.greenfeld@gmail.com, oren@dreamix.co.il";
+
 $to= "alon.greenfeld@gmail.com";
 $subject="ליד מדף נחיתה מפקחי בטיחות";
 $from = "מפקחי בטיחות <no-reply@dreamix.co.il>";
